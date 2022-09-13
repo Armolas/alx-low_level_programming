@@ -22,3 +22,20 @@ void print_alphabet_x10(void)
 	i++;
 	}
 }
+
+/**
+ * print_alphabet - function to print all lower case alphabets
+ *
+ *Return: void
+ */
+void print_alphabet(void)
+{
+	char low = 'a';
+
+	while (low <= 'z')
+	{
+	putchar(low);
+	low++;
+	}
+	putchar('\n');
+}
