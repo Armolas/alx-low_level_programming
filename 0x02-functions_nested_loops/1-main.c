@@ -1,18 +1,12 @@
 #include "main.h"
 
 /**
- * print_alphabet - function to print all lower case alphabets
+ * main - Entry point
  *
- *Return: void
+ * Return: Always 0 (Success)
  */
-void print_alphabet(void)
+int main(void)
 {
-	int low = 97;
-
-	while (low <= 122)
-	{
-	_putchar(low);
-	low++;
-	}
-	_putchar('\n');
+	print_alphabet();
+	return (0);
 }
