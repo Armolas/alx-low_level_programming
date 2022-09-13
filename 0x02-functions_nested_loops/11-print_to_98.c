@@ -3,9 +3,9 @@
 #include <stdio.h>
 
 /**
- * Print_to_98 - main function
+ *print_to_98 - prints to 98
  *
- * @n: character etc
+ *@n: start character
  */
 void print_to_98(int n)
 {
