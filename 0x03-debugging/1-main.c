@@ -2,7 +2,6 @@
 
 /**
  * main - causes an infinite loop
- * @'\\o/\n"': a character
  * Return: 0
  */
 
@@ -14,7 +13,7 @@ int main(void)
 
 	i = 0;
 /**
-*	while (i < 10) - causes infinite loop
+*	while (i < 10)
 *	{
 *		putchar(i);
 *	}
