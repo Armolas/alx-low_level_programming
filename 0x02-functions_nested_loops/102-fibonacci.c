@@ -5,7 +5,7 @@
  *
  * Return: always 0.
  */
-int main (void)
+int main(void)
 {
 	int counter = 2;
 	long int a = 1;
