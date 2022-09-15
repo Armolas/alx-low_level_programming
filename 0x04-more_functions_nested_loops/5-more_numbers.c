@@ -11,11 +11,11 @@ void more_numbers(void)
 
 	while (j < 10)
 	{
-	int i = 0;
+	int i = '0';
 
-	while (i <= 14)
+	while (i <= '14')
 	{
-	_putchar('0' + i);
+	_putchar(i);
 	i++;
 	}
 	_putchar('\n');
