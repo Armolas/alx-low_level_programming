@@ -4,11 +4,11 @@
 /**
  * main - entry point
  *
- * return: 0
+ * Return: 0
  */
 int main(void)
 {
-	int i, j , k, l;
+	int i, j, k, l;
 	char c[] = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char p[58];
 
