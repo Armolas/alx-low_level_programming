@@ -5,7 +5,8 @@
  * @s1: first string
  * @s2: second string
  *
- * Return: returns 0 if the strings are the same, positive if s1 is greater than s2 and negative if s2 is greater than s1
+ * Return: returns 0 if the strings are the same, positive if s1 is
+ *greater than s2 and negative if s2 is greater than s1
  */
 int _strcmp(char *s1, char *s2)
 {
@@ -17,11 +18,11 @@ int _strcmp(char *s1, char *s2)
 		{
 			if (s1[i] > s2[i])
 			{
-				value = 1;
+				value = 15;
 			}
 			else
 			{
-				value = -1;
+				value = -15;
 			}
 		}
 		break;
