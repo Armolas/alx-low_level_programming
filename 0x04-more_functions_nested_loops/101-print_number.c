@@ -13,7 +13,9 @@ void print_number(int n)
 	int c = 0;
 
 	if (n == 0)
+	{
 		_putchar('0');
+	}
 	if (n < 0)
 	{
 		_putchar('-');
@@ -30,7 +32,9 @@ void print_number(int n)
 		c++;
 	}
 	for (i = 1; i < c; i++)
+	{
 		d *= 10;
+	}
 	for (i = 0; i < c; i++)
 	{
 		_putchar(y / d + '0');
