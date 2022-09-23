@@ -22,7 +22,7 @@ void print_number(int n)
 		n = n + 1;
 		n = -n;
 		y = n;
-		x = n:
+		x = n;
 		x += 1;
 		y += 1;
 	}
