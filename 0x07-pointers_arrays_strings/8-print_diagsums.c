@@ -7,7 +7,7 @@
  *@a: matrix
  *@size: matrix size
  */
-void print_diagsums(int *a, int size)
+void print_diagsums(int (*a)[size][size], int size)
 {
 	int i, j;
 	int sumA = 0;
