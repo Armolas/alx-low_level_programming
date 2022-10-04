@@ -8,8 +8,8 @@
  */
 char *_strdup(char *str)
 {
-	int i;
-	char *a, j;
+	unsigned int i, j;
+	char *a;
 
 	if (str == NULL)
 		return ('\0');
