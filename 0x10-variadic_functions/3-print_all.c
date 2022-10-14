@@ -20,7 +20,7 @@ void print_i(va_list i)
 }
 /**
  * print_s - prints a string
- * @s; the string
+ * @s: the string
  */
 void print_s(va_list s)
 {
