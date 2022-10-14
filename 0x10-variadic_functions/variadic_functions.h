@@ -1,5 +1,7 @@
 #ifndef VARIADIC_FUNCTIONS_H
 #define VARIADIC_FUNCTIONS_H
+
+#include <stdarg.h>
 /**
  * struct print - prints a particular type of data
  * @t: data type
@@ -8,8 +10,8 @@
 typedef struct print
 {
 	char *t;
-	void (*f)(ap);
-}
+	void (*f)(va_list);
+} print_t;
 
 int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
