@@ -16,7 +16,7 @@ void print_c(va_list c)
  */
 void print_i(va_list i)
 {
-	printf("%d", va_arg(i, int)):
+	printf("%d", va_arg(i, int));
 }
 /**
  * print_s - prints a string
