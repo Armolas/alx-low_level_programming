@@ -5,7 +5,6 @@
  */
 int main(void)
 {
-	int i;
 	unsigned long a = 0;
 	unsigned long b = 1;
 	unsigned long sum;
