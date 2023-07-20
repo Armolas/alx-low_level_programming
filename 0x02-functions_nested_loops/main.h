@@ -15,5 +15,6 @@ int add(int, int);
 #include <stdio.h>
 void print_to_98(int n);
 void print_times_table(int n);
+void print_number(int num);
 
 #endif
