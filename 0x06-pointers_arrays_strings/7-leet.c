@@ -8,7 +8,7 @@ char *leet(char *s)
 {
 	int i, j;
 	char letter[] = "AaEeOoTtLl";
-	char num[] = "4433007711";
+	int num[] = "4433007711";
 
 	for (i = 0 ; s[i] != '\0' ; i++)
 	{
@@ -16,8 +16,6 @@ char *leet(char *s)
 		{
 			if (s[i] == letter[j])
 				s[i] = num[j];
-			else
-				continue;
 		}
 	}
 	return (s);
