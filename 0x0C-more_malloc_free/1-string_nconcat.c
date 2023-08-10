@@ -4,6 +4,7 @@
  * @s1: first string
  * @s2: second string
  * @n: number of bytes
+ * Return: pointer to new string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -12,7 +13,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	for (i = 0 ; s1[i] != '\0' ; i++)
 		;
-	i = i + n +1;
+	i = i + n + 1;
 	s = (char *) malloc(i * sizeof(char));
 	if (!s)
 		exit(0);
