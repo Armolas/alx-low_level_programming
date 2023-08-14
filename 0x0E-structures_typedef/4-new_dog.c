@@ -1,4 +1,5 @@
 #include "dog.h"
+#include <stdlib.h>
 /**
  * new_dog - adds a new dog profile
  * @name: dog name
