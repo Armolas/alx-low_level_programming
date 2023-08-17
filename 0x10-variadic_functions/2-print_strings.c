@@ -8,12 +8,13 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
 	va_list arg_list;
-
+	char *sp;
 	va_start(arg_list, n);
 	for (i = 0 ; i < n ; i++)
 	{
-		if (va_arg(arg_list, char *))
-			printf("%s", va_arg(arg_list, char *));
+		sp = va_arg(arg_list, char *);
+		if (sp)
+			printf("%s", sp);
 		else
 			printf("nil");
 		if (separator && i != n - 1)
