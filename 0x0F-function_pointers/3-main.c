@@ -16,13 +16,13 @@ int main(int argc, char *argv[])
 	if (argc != 4)
 	{
 		printf("Error\n");
-		return (98);
+		exit(98);
 	}
 	f = (get_op_func(op));
 	if (f == NULL)
 	{
 		printf("Error\n");
-		return (99);
+		exit(99);
 	}
 	res = f(a, b);
 	printf("%d\n", res);
