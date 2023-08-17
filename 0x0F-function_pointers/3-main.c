@@ -7,6 +7,8 @@
  */
 int main(int argc, char *argv[])
 {
+	if (!argv[])
+		exit(98);
 	int a = atoi(argv[1]);
 	int b = atoi(argv[3]);
 	char *op = argv[2];
