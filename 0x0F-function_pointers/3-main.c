@@ -7,14 +7,14 @@
  */
 int main(int argc, char *argv[])
 {
-	if (!argv[])
-		exit(98);
 	int a = atoi(argv[1]);
 	int b = atoi(argv[3]);
 	char *op = argv[2];
 	int res;
 	int (*f)(int a, int b);
 
+	if (*argv == NULL)
+		exit(98);
 	if (argc != 4)
 	{
 		printf("Error\n");
