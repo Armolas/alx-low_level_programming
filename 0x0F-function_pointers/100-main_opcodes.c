@@ -12,6 +12,8 @@ void print_codes(const unsigned char *first, int numb)
 	for (i = 0; i < numb; i++)
 	{
 		printf("%02x", first[i]);
+		if (i != numb - 1)
+			printf(" ");
 	}
 	printf("\n");
 }
