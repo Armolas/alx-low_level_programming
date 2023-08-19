@@ -10,6 +10,8 @@ void print_all(const char * const format, ...)
 	double f;
 	va_list arg_list;
 
+	if (!format)
+		return;
 	va_start(arg_list, format);
 	while (format[j])
 	{
