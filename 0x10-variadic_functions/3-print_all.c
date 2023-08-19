@@ -34,7 +34,8 @@ void print_all(const char * const format, ...)
 				s = va_arg(arg_list, char *);
 				if (!s)
 					printf("nil");
-				printf("%s", s);
+				else
+					printf("%s", s);
 				break;
 		}
 		if (format[j + 1] && (format[j] == 'c' || format[j] == 'i' ||
