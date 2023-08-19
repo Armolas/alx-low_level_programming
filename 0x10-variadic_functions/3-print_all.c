@@ -32,10 +32,7 @@ void print_all(const char * const format, ...)
 
 			case 's':
 				s = va_arg(arg_list, char *);
-				if (!s)
-					printf("nil");
-				else
-					printf("%s", s);
+				s ? printf("%s", s) : printf("nil");
 				break;
 		}
 		if (format[j + 1] && (format[j] == 'c' || format[j] == 'i' ||
