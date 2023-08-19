@@ -11,8 +11,10 @@ void print_all(const char * const format, ...)
 	va_list arg_list;
 
 	if (!format)
-		printf("\0");
+	{
+		printf("\n");
 		return;
+	}
 	va_start(arg_list, format);
 	while (format[j])
 	{
