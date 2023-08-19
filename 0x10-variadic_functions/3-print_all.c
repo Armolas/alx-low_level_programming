@@ -5,7 +5,7 @@
  */
 void print_all(const char * const format, ...)
 {
-	int i = 0, j = 0, k = 4;
+	int i = 0, j = 0, k = 0;
 	char c;
 	char *s;
 	double f;
@@ -14,24 +14,26 @@ void print_all(const char * const format, ...)
 	va_start(arg_list, format);
 	while (format[i])
 	{
-		if (format[i] == 'c' || format[i] == 'i' ||
-				format[i] == 'f' || format[i] == 's')
-		{
+		if (k > 0)
+			printf(", ");
 		switch (format[i])
 		{
 			case 'c':
 				c = va_arg(arg_list, int);
 				printf("%c", c);
+				k++;
 				break;
 
 			case 'i':
 				j = va_arg(arg_list, int);
 				printf("%d", j);
+				k++;
 				break;
 
 			case 'f':
 				f = va_arg(arg_list, double);
 				printf("%f", f);
+				k++;
 				break;
 
 			case 's':
@@ -39,13 +41,8 @@ void print_all(const char * const format, ...)
 				if (!s)
 					printf("nil");
 				printf("%s", s);
+				k++;
 				break;
-		}
-		while (i < k - 1)
-		{
-			printf(", ");
-			break;
-		}
 		}
 		i++;
 	}
