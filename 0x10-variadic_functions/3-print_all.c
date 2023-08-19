@@ -36,10 +36,10 @@ void print_all(const char * const format, ...)
 
 			case 's':
 				s = va_arg(arg_list, char *);
-				if (s)
-					printf("%s", s);
-				else
+				if (!s)
 					printf("nil");
+				printf("%s", s);
+				break;
 		}
 		while (i < k - 1)
 		{
