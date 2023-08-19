@@ -5,16 +5,12 @@
  */
 void print_all(const char * const format, ...)
 {
-	int i = 0, j = 0, k = 0;
+	int i = 0, j = 0, k = 4;
 	char c;
 	char *s;
 	double f;
 	va_list arg_list;
 
-	while (format[k])
-	{
-		k++;
-	}
 	va_start(arg_list, format);
 	while (format[i])
 	{
