@@ -6,7 +6,7 @@
  */
 size_t list_len(const list_t *h)
 {
-	size_t nc;
+	size_t nc = 0;
 
 	if (!h)
 		return (0);
