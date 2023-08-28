@@ -1,4 +1,4 @@
-#Include "lists.h"
+#include "lists.h"
 /**
  * add_nodeint_end - adds a new element to the list
  * @head: head of the list
@@ -7,7 +7,7 @@
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	listint_t new, *currentList;
+	listint_t *new, *currentList;
 
 	new = malloc(sizeof(listint_t));
 	if (!new)
