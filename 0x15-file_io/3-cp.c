@@ -55,6 +55,7 @@ int main(int argc, char **argv)
 				exit(100);
 			}
                         cl2 = close(fd2);
+			if (cl2 < 0)
 			{
 				dprintf(2, "Error: Can't close fd %d\n", fd2);
 				exit(100);
