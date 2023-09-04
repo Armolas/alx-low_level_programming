@@ -28,12 +28,15 @@ int main(int argc, char **argv)
         fd2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
         if (fd2 < 0)
         {
+		close(fd1);
                 dprintf(2, "Error: Can't write to %s\n", argv[2]);
                 exit(99);
         }
         buffer = malloc(sizeof(char) * 1024);
 	if (!buffer)
 	{
+		close(fd1);
+		close(fd2);
 		return (1);
 	}
         while(br >= 0)
@@ -42,6 +45,8 @@ int main(int argc, char **argv)
                 bw = write(fd2, buffer, br);
                 if(bw < 0)
 		{
+			close(fd1);
+			close(fd2);
 			dprintf(2, "Error: Can't write to %s\n", argv[2]);
                         exit(99);
 		}
