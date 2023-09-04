@@ -25,7 +25,7 @@ int main(int argc, char **argv)
                 dprintf(2, "Error: Can't read from file %s\n", argv[1]);
                 exit(98);
         }
-        fd2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+        fd2 = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
         if (fd2 < 0)
         {
 		close(fd1);
@@ -47,6 +47,7 @@ int main(int argc, char **argv)
 		{
 			close(fd1);
 			close(fd2);
+			free(buffer);
 			dprintf(2, "Error: Can't write to %s\n", argv[2]);
                         exit(99);
 		}
@@ -68,5 +69,5 @@ int main(int argc, char **argv)
                         return (0);
                 }
 	}
-	return (0);
+	return (1);
 }
