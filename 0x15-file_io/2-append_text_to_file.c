@@ -5,7 +5,7 @@
  * @text_content: text to be added
  * Return: 1 or -1
  */
-append_text_to_file(const char *filename, char *text_content)
+int append_text_to_file(const char *filename, char *text_content)
 {
 	int fd, bw, count;
 
@@ -27,6 +27,6 @@ append_text_to_file(const char *filename, char *text_content)
 		close(fd);
 		return (-1);
 	}
-	close(fd)
-		return(1);
+	close(fd);
+	return (1);
 }
