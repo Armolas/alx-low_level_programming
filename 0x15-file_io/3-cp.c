@@ -11,8 +11,8 @@
  */
 int main(int argc, char **argv)
 {
-        int fd1, fd2, br = 0, bw;
-        char *buffer;
+        int fd1, fd2, br = 0, bw, cl1, cl2;
+	char *buffer;
 
         if (argc != 3)
         {
@@ -32,17 +32,33 @@ int main(int argc, char **argv)
                 exit(99);
         }
         buffer = malloc(sizeof(char) * 1024);
+	if (!buffer)
+	{
+		return (1);
+	}
         while(br >= 0)
         {
                 br = read(fd1, buffer, 1024);
                 bw = write(fd2, buffer, br);
                 if(bw < 0)
+		{
+			dprintf(2, "Error: Can't write to %s\n", argv[2]);
                         exit(99);
+		}
                 if(br < 1024)
                 {
                         free(buffer);
-                        close(fd1);
-                        close(fd2);
+                       	cl1 = close(fd1);
+			if (cl1 < 0)
+			{
+				dprintf(2, "Error: Can't close fd %d\n", fd1);
+				exit(100);
+			}
+                        cl2 = close(fd2);
+			{
+				dprintf(2, "Error: Can't close fd %d\n", fd2);
+				exit(100);
+			}
                         return (0);
                 }
 	}
