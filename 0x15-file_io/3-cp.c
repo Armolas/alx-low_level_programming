@@ -42,6 +42,14 @@ int main(int argc, char **argv)
         while(br >= 0)
         {
                 br = read(fd1, buffer, 1024);
+		if (br < 0)
+		{
+			close(fd1);
+			close(fd2);
+			free(buffer);
+			dprintf(1, "Error: Can't read from file %s\n", argv[1]);
+			exit(98);
+		}	
                 bw = write(fd2, buffer, br);
                 if(bw < 0)
 		{
