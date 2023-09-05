@@ -56,7 +56,7 @@ int main(int argc, char **argv)
 			close(fd1);
 			close(fd2);
 			free(buffer);
-			dprintf(2, "Error: Can't write to %s\n", argv[2]);
+			dprintf(1, "Error: Can't write to %s\n", argv[2]);
                         exit(99);
 		}
                 if(br < 1024)
