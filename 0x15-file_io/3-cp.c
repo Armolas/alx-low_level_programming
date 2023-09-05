@@ -47,7 +47,7 @@ int main(int argc, char **argv)
 			close(fd1);
 			close(fd2);
 			free(buffer);
-			dprintf(1, "Error: Can't read from file %s\n", argv[1]);
+			dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 			exit(98);
 		}	
                 bw = write(fd2, buffer, br);
