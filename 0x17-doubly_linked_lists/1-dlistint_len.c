@@ -6,15 +6,14 @@
  */
 size_t dlistint_len(const dlistint_t *h)
 {
-	dlistint_t *current = h->next;
 	size_t nb  = 0;
 
 	if (!h)
 		return (nb);
 	nb++;
-	while (current)
+	while (h)
 	{
-		current = current->next;
+		h = h->next;
 		nb++;
 	}
 	return (nb);
