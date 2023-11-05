@@ -2,7 +2,7 @@
 /**
  * hash_table_set - adds an element to hash table
  * @ht: the hash table
- * @key; the key string
+ * @key: the key string
  * @value: the value string
  * Return: 0 or 1
  */
@@ -13,7 +13,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (!ht || !key)
 		return (0);
-	if(!new)
+	if (!new)
 		return (0);
 	new->key = strdup(key);
 	new->value = strdup(value);
@@ -29,6 +29,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			if (strcmp(temp->key, key) == 0)
 			{
 				free(temp->value);
+				free(new->value);
+				free(new->key);
+				free(new);
 				temp->value = strdup(value);
 				return (1);
 			}

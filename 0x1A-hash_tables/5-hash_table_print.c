@@ -33,10 +33,7 @@ void hash_table_print(const hash_table_t *ht)
 	int len, count = 0;
 
 	if (!ht)
-	{
-		printf("{}\n");
 		return;
-	}
 	len = ht_len(ht);
 	printf("{");
 	while (i < ht->size)
