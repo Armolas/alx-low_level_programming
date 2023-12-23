@@ -8,7 +8,7 @@ school: ${OBJ}
 	${CC} ${OBJ} -o ${NAME}
 
 main.o: main.c
-	gcc -c main.c
+	${CC} -c main.c
 
 school.o: school.c
-	gcc -c school.c
+	${CC} -c school.c
