@@ -1,8 +1,10 @@
-all: school main.o school.o
+all: school ${OBJ}
 CC = gcc
 SRC = main.c school.c
 OBJ = main.o school.o
 NAME = school
+
+all: school ${OBJ}
 
 school: ${OBJ}
 	${CC} ${OBJ} -o ${NAME}
