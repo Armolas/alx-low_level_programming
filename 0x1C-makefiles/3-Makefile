@@ -17,5 +17,4 @@ oclean:
 	${RM} $(wildcard *.o)
 fclean:
 	${RM} $(wildcard *~) $(wildcard *.swp) ${NAME} $(wildcard *.o)
-re:
-	
+re: fclean all
