@@ -3,8 +3,8 @@ SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
 RM = rm -f
-all: re ${NAME}
-.PHONY: clean oclean fclean
+all: ${NAME}
+.PHONY: clean oclean fclean re
 ${NAME}: ${OBJ}
 	${CC} ${OBJ} -o ${NAME}
 
@@ -18,3 +18,4 @@ oclean:
 fclean:
 	${RM} $(wildcard *~) $(wildcard *.swp) ${NAME} $(wildcard *.o)
 re:
+	
